@@ -11,7 +11,20 @@ class MyDrawer extends StatelessWidget {
     
     return Drawer(
       backgroundColor: Theme.of(context).colorScheme.surface,
-      child: Column(),
+      child: Column(
+        children: [
+
+          //cutlery
+          SizedBox(height: 15,),
+          Center(
+            child: Image.asset(controller.head),
+          ),
+          SizedBox(height: 30,),
+
+          Expanded(
+            child: ListView(),
+          )]
+      ),
     );
   }
 }

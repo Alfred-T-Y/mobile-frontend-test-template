@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:test_gogivam/pages/app.dart';
+import 'package:test_gogivam/pages/dashboard_screen.dart';
 
 
 part 'app_routes.dart';
@@ -9,7 +9,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: Routes.mainPage, 
-      page: ()=>MainPage()
+      page: ()=>DashboardScreen()
     ),
   ];
 }
