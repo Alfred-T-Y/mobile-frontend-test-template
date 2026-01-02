@@ -10,8 +10,8 @@ class Kpicard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
-      height: 110,
+      width: 200,
+      height: 70,
       child: Card(
         color: Theme.of(context).colorScheme.tertiary,
         elevation: 5,
@@ -21,24 +21,25 @@ class Kpicard extends StatelessWidget {
         child: Center(
           child: Row(
             children: [
-              SizedBox(width: 20,),
+              SizedBox(width: 15,),
 
               Image.asset(
                 card.pathimage,
-                width: 60,  
-                height: 60,  
+                width: 30,  
+                height: 30,  
                 fit: BoxFit.cover, ),
 
-              SizedBox(width: 10,),
+              SizedBox(width: 5,),
 
               Center(
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       card.number,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                        fontSize: 30, 
+                        fontSize: 15, 
                         fontWeight: FontWeight.bold,
                         color: card.color),
                     ),
@@ -47,7 +48,7 @@ class Kpicard extends StatelessWidget {
                       textAlign: TextAlign.left,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 17),
+                        fontSize: 10),
                     ),
                   ],
                 ),

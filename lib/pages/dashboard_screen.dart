@@ -31,8 +31,17 @@ class DashboardScreen extends StatelessWidget {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Center(child: Kpicard(card: controller.cardSales)),
+                  Kpicard(card: controller.cardSales),
+                  Kpicard(card: controller.cardCustomers),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Kpicard(card: controller.cardProducts),
+                  Kpicard(card: controller.cardRevenues),
                 ],
               )
             ],
