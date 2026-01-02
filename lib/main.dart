@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_gogivam/routes/app_pages.dart';
+import 'package:test_gogivam/themes/light_mode.dart';
 
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //la page de depart est la page "mainPage"
     return GetMaterialApp(
-      themeMode: ThemeMode.system,
+      theme: lightMode,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.mainPage,
+      initialRoute: Routes.dashboard,
       getPages: AppPages.routes,
     );
   }

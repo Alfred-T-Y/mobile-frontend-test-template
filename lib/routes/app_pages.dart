@@ -8,7 +8,7 @@ part 'app_routes.dart';
 class AppPages {
   static final routes = [
     GetPage(
-      name: Routes.mainPage, 
+      name: Routes.dashboard, 
       page: ()=>DashboardScreen()
     ),
   ];

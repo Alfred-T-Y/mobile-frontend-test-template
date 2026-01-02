@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_gogivam/controllers/drawer_controller.dart';
+import 'package:test_gogivam/widgets/my_drawer_tile.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -10,7 +11,7 @@ class MyDrawer extends StatelessWidget {
     final controller = Get.put(MyDrawerController());
     
     return Drawer(
-      backgroundColor: Theme.of(context).colorScheme.surface,
+      backgroundColor: Theme.of(context).colorScheme.tertiary,
       child: Column(
         children: [
 
@@ -22,7 +23,17 @@ class MyDrawer extends StatelessWidget {
           SizedBox(height: 30,),
 
           Expanded(
-            child: ListView(),
+            child: ListView.builder(
+              itemCount: controller.drawertilelist.length,
+              itemBuilder: (context, index){
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: MyDrawerTile(text: controller.drawertilelist[index].text, 
+                    icon: controller.drawertilelist[index].icon, 
+                    onTap: controller.drawertilelist[index].onTap),
+                );
+              }
+            ),
           )]
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:test_gogivam/controllers/dashboard_screen_controller.dart';
 import 'package:test_gogivam/pages/drawer.dart';
+import 'package:test_gogivam/widgets/kpicard.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -13,6 +14,7 @@ class DashboardScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
         title: Text(
           "Dashboard",
           style: TextStyle(
@@ -28,7 +30,11 @@ class DashboardScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Text("Hello world")
+              Row(
+                children: [
+                  Center(child: Kpicard(card: controller.cardSales)),
+                ],
+              )
             ],
           ),
         )),
